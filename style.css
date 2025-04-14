@@ -1,4 +1,3 @@
-/* CSS */
 body {
     font-family: Arial, sans-serif;
     background: linear-gradient(135deg, #74ebd5, #acb6e5); /* Gradasi latar belakang */
@@ -68,14 +67,14 @@ ul {
 /* Animasi Fade In */
 @keyframes fadeIn {
     from {
-        opacity: 0; /* Mulai dari transparan */
+        opacity: 0; 
     }
     to {
-        opacity: 1; /* Berakhir dengan terlihat */
+        opacity: 1; 
     }
 }
 
-/* CSS untuk mengatur tata letak teks dan gambar profil */
+
 .d-flex {
     display: flex; /* Menggunakan Flexbox untuk tata letak */
     align-items: center; /* Menjaga agar gambar dan teks sejajar vertikal */
@@ -84,4 +83,232 @@ ul {
 
 .ml-3 {
     margin-left: 15px; /* Memberikan jarak antara gambar dan teks */
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    color: #333;
+    padding-top: 70px;
+ }
+ 
+ h2 {
+    color: #2c504f;
+    border-bottom: 2px solid #2C3E50;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+ }
+ 
+ .navbar .nav-link {
+    margin-right: 15px;
+    color: #333;
+ }
+ 
+ .navbar .nav-link:hover {
+    color: #E74C3C;
+ }
+ 
+ .btn-danger {
+    background-color: #E74C3C;
+    border: none;
+ }
+ 
+ .btn-danger:hover {
+    background-color: #c0392b;
+ }
+ 
+ .social-icons a {
+    margin: 0 10px;
+    font-size: 1.5rem;
+    color: #2c5034;
+    transition: transform 0.3s;
+ }
+ 
+ .social-icons a:hover {
+    color: #E74C3C;
+    transform: scale(1.2);
+ }
+ 
+ .card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+ }
+ 
+ .card:hover {
+    transform: translateY(-5px);
+ }
+ 
+ .project-card {
+    position: relative;
+    overflow: hidden;
+ }
+ 
+ .project-card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 123, 255, 0.7); /* Biru transparan */
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+ }
+ 
+ .project-card:hover .overlay {
+    opacity: 1;
+ }
+ 
+ .project-card .overlay-text {
+    color: white;
+    padding: 20px;
+    text-align: center;
+ }
+ 
+ .project-card .overlay-text a.btn {
+    z-index: 3;
+ } 
+
+ 
+
+
+ .project-card-slideshow {
+    position: relative;
+    overflow: hidden;
+ }
+ 
+ .slideshow-wrapper {
+    position: relative;
+    width: 100%;
+    height: 250px; /* GANTI: tinggi tetap agar gambar utuh */
+    overflow: hidden;
+ }
+ 
+ .slideshow-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Tambahkan agar gambar menyesuaikan tinggi */
+    object-fit: cover; /* Agar gambar tetap proporsional dan tidak terdistorsi */
+    opacity: 0;
+    animation: fadeSlide 6s infinite;
+    transition: opacity 1s ease;
+    z-index: 1;
+ } 
+ 
+ .slideshow-img:nth-child(1) {
+    animation-delay: 0s;
+ }
+ 
+ .slideshow-img:nth-child(2) {
+    animation-delay: 3s;
+ }
+ 
+ @keyframes fadeSlide {
+    0% { opacity: 1; }
+    40% { opacity: 1; }
+    50% { opacity: 0; }
+    90% { opacity: 0; }
+    100% { opacity: 1; }
+ }
+ 
+ /* Overlay biru transparan seperti project lain */
+ .project-card-slideshow .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 123, 255, 0.7); /* BIRU transparan */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 2;
+ }
+ 
+ .project-card-slideshow:hover .overlay {
+    opacity: 1;
+ }
+ 
+ .overlay-text {
+    color: #fff;
+ }
+ 
+
+
+ .card-img-top {
+    height: 150px;
+    object-fit: cover;
+ }
+ 
+ .card-title {
+    font-size: 1rem;
+ }
+ 
+ .card-text {
+    font-size: 0.9rem;
+ }
+ 
+
+ #skills {
+    background-color: #e0f7fa; /* Biru muda pastel */
+    color: #333; /* Warna teks yang kontras */
+ }
+ 
+ #projects {
+    background-color: #ccd6dd; /* abu pastel kebiruan */
+    color: #1a1a1a; /* teks gelap */
+ }
+ 
+ 
+ #contact {
+    background-color: #d0e2f2; /* Biru terang lembut */
+    color: #333; /* Warna teks untuk kontras */
+ }
+ 
+
+ .footer-custom {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    font-size: 0.95rem;
+    padding: 20px 0; /* atas-bawah 20px */
+    margin-top: 40px; /* jarak dari ikon sosial media */
+    letter-spacing: 0.5px;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+}
+.footer-custom p {
+    margin: 0;
+}
+
+
+/* Navbar */
+.navbar.navbar-expand-lg {
+    background-color: #2c3e50 !important; /* Warna latar belakang navbar yang konsisten, gunakan !important untuk mengutamakan ini */
+    color: #ecf0f1 !important;            /* Warna teks navbar */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Menambahkan shadow untuk kesan elegan */
+}
+
+.navbar.navbar-expand-lg .navbar-brand,
+.navbar.navbar-expand-lg .nav-link {
+    color: #ecf0f1 !important; /* Warna teks navbar putih */
+}
+
+.navbar.navbar-expand-lg .nav-link:hover {
+    color: #E74C3C !important; /* Warna merah saat hover */
+}
+
+.navbar.navbar-expand-lg .btn-danger {
+    background-color: #E74C3C !important; /* Merah untuk tombol Contact */
+    border: none;
+}
+
+.navbar.navbar-expand-lg .btn-danger:hover {
+    background-color: #c0392b !important; /* Merah gelap saat hover */
+}
+
+.navbar.navbar-expand-lg .navbar-toggler-icon {
+    background-color: #ecf0f1 !important; /* Mengubah warna ikon navbar di mobile */
 }
